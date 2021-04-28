@@ -18,7 +18,8 @@
     "e2e": "ng e2e",
     "kill": "kill -9 $(lsof -t -i:4200)",
     "reinstall": "rm package-lock.json && rm -rf node_modules && npm i",
-    "sass:rebuild": "npm rebuild node-sass"
+    "sass:rebuild": "npm rebuild node-sass",
+    "custom-link": "npm run build:lib && cd dist/ng-gantt && npm link",
   },
   "dependencies": {
     "@angular/common": "10.0.8",
