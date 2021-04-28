@@ -7,8 +7,8 @@
     "start": "ng serve",
     "build": "npm run copy && ng build",
     "copy": "cp -R dist/ng-gantt src/ng-gantt",
-    "build:app": "npm run copy && ng build --project packages && rimraf src/ng-gantt",
-    "build:lib": "rimraf dist && ng-packagr -p ng-gantt/package.json",
+    "build:app": "npm run copy && ng build --project packages && npx rimraf src/ng-gantt",
+    "build:lib": "npx rimraf dist && ng-packagr -p ng-gantt/package.json",
     "publish-npm": "npm run build:lib && cd dist/ng-gantt && npm publish",
     "reload": "npm run build:lib && npm run build && npm run start",
     "dev": "cd dist/app && http-server",
@@ -19,7 +19,7 @@
     "kill": "kill -9 $(lsof -t -i:4200)",
     "reinstall": "rm package-lock.json && rm -rf node_modules && npm i",
     "sass:rebuild": "npm rebuild node-sass",
-    "custom-link": "npm run build:lib && cd dist/ng-gantt && npm link",
+    "custom-link": "npm run build:lib && cd dist/ng-gantt && npm link"
   },
   "dependencies": {
     "@angular/common": "10.0.8",
